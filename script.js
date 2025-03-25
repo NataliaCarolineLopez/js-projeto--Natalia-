@@ -101,3 +101,15 @@ function animateText() {
 // inicia a animação quando carrega a pagina
 document.addEventListener('DOMContentLoaded', animateText);
 updateTextColor(); 
+
+// ================= ANIMAÇÃO DA SEÇÃO HOME 
+// Seleciona a seção home e aplica uma animação de fade-in
+const homeSection = document.querySelector('#home');
+homeSection.style.opacity = '0';
+homeSection.style.transform = 'translateY(200px)';
+homeSection.style.transition = 'opacity 1s ease, transform 1s ease';
+
+setTimeout(() => {
+  homeSection.style.opacity = '1';
+  homeSection.style.transform = 'translateY(0)';
+}, 100);
